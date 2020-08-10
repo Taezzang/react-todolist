@@ -12,9 +12,9 @@ class TodoItem extends React.Component {
         console.log({id});
         return (
             <div className="todo-item" onClick={() => onToggle(id)}>
-                <div className="remove" onClick={(e) => {
+                <div className="remove" onClick={(e) => {   //
                     e.stopPropagation();    // onTooggle 실행 막음
-                    onRemove(id)
+                    onRemove(id)    
                 }}>&times;</div>
                 <div className={`todo-text ${checked && 'checked'}`}>
                     <div>{text}</div>

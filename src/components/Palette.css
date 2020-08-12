@@ -1,18 +1,21 @@
 .palette {
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
+    background-color: #f2f2f2;
   }
   
   .color {
     width: 2rem;
     height: 2rem;
-    opacity: 0.5;
+    opacity: 0.3;
     transition: all 0.2s;
     cursor: pointer;
   }
   
   .color:hover {
-    opacity: 0.75;
+    opacity: 1;
   }
   
   .color.active, .color:active {

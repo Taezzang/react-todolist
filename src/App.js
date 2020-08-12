@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
@@ -19,7 +18,7 @@ id = 3  // 이미 0, 1, 2 가 존재하므로 3으로 설정
       { id: 1, text: ' JSX 사용해보기 ', checked: true},
       { id: 2, text: ' 라이프 사이클 이해하기 ', checked: false}
     ],
-    color: '#343a40'
+    color: '#343a40'  // 기본색
   }
 
   handleChange = (e) => {
@@ -36,7 +35,7 @@ id = 3  // 이미 0, 1, 2 가 존재하므로 3으로 설정
         id: this.id++,
         text: input,
         checked: false,
-        color
+        color // color : color 랑 동일한듯 (필드명 = 객체명 일 경우 생략해도 되는듯)
       })
     });
   }
@@ -106,7 +105,7 @@ id = 3  // 이미 0, 1, 2 가 존재하므로 3으로 설정
           <Palette colors={colors} selected={color} onSelect={handleSelectColor} /> 
         )}>
         <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
-      </TodoListTemplate>
+      </TodoListTemplate> // TodoItemList가 템플릿의 children과 매핑된다.
     );
   }
 }
